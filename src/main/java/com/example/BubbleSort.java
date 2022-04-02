@@ -8,6 +8,8 @@ public class BubbleSort {
      * @return
      */
     public static int[] sort(int[] values) {
+        // prevent making changes to the source
+        // create new reference in the heap
         int[] toSort = values.clone();
         for (int i = 0; i < toSort.length; i++) {
             System.out.println("next i: " + i);
