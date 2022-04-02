@@ -1,6 +1,4 @@
-import com.example.BubbleSort;
-import com.example.InsertionSort;
-import com.example.SelectionSort;
+import com.example.sort.InsertionSort;
 
 public class Application {
 
@@ -20,7 +18,7 @@ public class Application {
 //            System.out.println("sorted :" + String.valueOf(a));
 //        }
 
-        int[] insertionSort = com.example.InsertionSort.sort(new int[]{12, 5, 8, 7, 2});
+        int[] insertionSort = InsertionSort.sort(new int[]{12, 5, 8, 7, 2});
         System.out.println("Insertion sort...");
         for (int a:insertionSort) {
             System.out.println("sorted :" + String.valueOf(a));
