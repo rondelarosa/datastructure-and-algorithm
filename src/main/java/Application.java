@@ -1,4 +1,5 @@
 import com.example.BubbleSort;
+import com.example.InsertionSort;
 import com.example.SelectionSort;
 
 public class Application {
@@ -13,9 +14,15 @@ public class Application {
 //            System.out.println("sorted :" + String.valueOf(a));
 //        }
 
-        int[] selectionSort = SelectionSort.sort(new int[]{12, 5, 8, 7, 2});
-        System.out.println("Selection sort...");
-        for (int a:selectionSort) {
+//        int[] selectionSort = SelectionSort.sort(new int[]{12, 5, 8, 7, 2});
+//        System.out.println("Selection sort...");
+//        for (int a:selectionSort) {
+//            System.out.println("sorted :" + String.valueOf(a));
+//        }
+
+        int[] insertionSort = com.example.InsertionSort.sort(new int[]{12, 5, 8, 7, 2});
+        System.out.println("Insertion sort...");
+        for (int a:insertionSort) {
             System.out.println("sorted :" + String.valueOf(a));
         }
     }
