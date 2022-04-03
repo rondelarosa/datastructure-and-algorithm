@@ -2,6 +2,10 @@ package com.example.struct;
 
 import java.util.Arrays;
 
+/**
+ * Building a Heap: O(nlog2n)
+ * Fixing the heap, heap must be greater than the children
+ */
 public class AscendingHeap {
 	private Integer[] heapData;
 	private int currentPosition = -1;

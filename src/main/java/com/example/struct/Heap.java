@@ -3,6 +3,8 @@ package com.example.struct;
 import java.util.Arrays;
 
 /**
+ * Building a Heap: O(nlog2n)
+ * Fixing the heap, heap must be greater than the children
  * Implementation of heap using arrays
  */
 public class Heap {
@@ -19,7 +21,10 @@ public class Heap {
 		this.heapData[++currentPosition] = item;
 		fixUp(currentPosition);
 	}
-	
+
+	/**
+	 * O(log2n) Big O notation log base of n
+	 */
 	public int deleteRoot() {
 		int result = heapData[0];
 		heapData[0] = heapData[currentPosition--];
@@ -27,7 +32,10 @@ public class Heap {
 		fixDown(0, -1);
 		return result;
 	}
-	
+
+	/**
+	 * O(log2n) Big O notation log base of n
+	 */
 	private void fixDown(int index, int upto) {
 		if (upto < 0) upto = currentPosition;
 		while (index <= upto) {
@@ -54,7 +62,10 @@ public class Heap {
 			
 		}
 	}
-	
+
+	/**
+	 * O(log2n) Big O notation log base of n
+	 */
 	private void fixUp(int index) {
 		int i = (index-1)/2; //parent index
 		while (i >= 0 && heapData[i] < heapData[index]) {
