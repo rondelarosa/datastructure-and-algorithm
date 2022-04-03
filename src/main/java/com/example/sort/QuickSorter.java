@@ -2,9 +2,17 @@ package com.example.sort;
 
 import java.util.Arrays;
 
+/**
+ * Better than merge sort in terms of memory
+ * Worst case: O(n2)
+ * Average case: O (n log n)
+ * It uses "In place sorting", no extra memory to use
+ * Ex: 12 9 7 15 10 -> 10 in the last index called pivot element
+ */
 public class QuickSorter {
 	
-	public void sort(Integer[] data) {
+	public void sort(Integer[] values) {
+		Integer[] data = values.clone();
 		quicksort(data, 0, data.length-1);
 	}
 	

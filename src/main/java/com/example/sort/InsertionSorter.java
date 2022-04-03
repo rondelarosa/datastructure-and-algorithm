@@ -10,7 +10,8 @@ public class InsertionSorter {
 		System.out.println(Arrays.toString(data));
 	}
 	
-	public void sort(Integer[] data) {
+	public void sort(Integer[] values) {
+		Integer[] data = values.clone();
 		for (int i =0; i < data.length; i++) {
 			int current = data[i];
 			int j = i-1;

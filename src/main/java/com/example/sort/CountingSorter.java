@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class CountingSorter {
 
-	public void sort(Integer[] data) {
+	public void sort(Integer[] values) {
+		Integer[] data = values.clone();
+
 		int[] temp = new int[11];
 
 		for (int i = 0; i < data.length; i++) { // populate the temp array

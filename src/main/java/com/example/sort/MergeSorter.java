@@ -1,7 +1,11 @@
 package com.example.sort;
 
+/**
+ * Uses memory same size of data to be sorted
+ */
 public class MergeSorter {
-    public void sort(int[] data) {
+    public void sort(int[] values) {
+        int[] data = values.clone();
         mergeSort(data, 0, data.length-1);
     }
 

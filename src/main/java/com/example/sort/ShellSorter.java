@@ -5,7 +5,9 @@ import java.util.Random;
 
 public class ShellSorter {
 	
-	public void sort(Integer[] data) {
+	public void sort(Integer[] values) {
+		Integer[] data = values.clone();
+
 		if (data == null || data.length == 0)
 			return;
 		
