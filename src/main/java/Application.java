@@ -1,6 +1,7 @@
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
 import com.example.sort.SelectionSort;
+import com.example.struct.DoubleEndedList;
 import com.example.struct.LinkedList;
 
 public class Application {
@@ -14,7 +15,33 @@ public class Application {
 //        selectionSort();
 //
 //        insertionSort();
-        linkedList();
+//        linkedList();
+        doubleEndedList();
+    }
+
+    private static void doubleEndedList() {
+        // Insert nodes
+        DoubleEndedList list = new DoubleEndedList();
+        list.insertAtTail(5);
+        list.insertAtTail(10);
+        list.insertAtTail(2);
+        list.insertAtTail(12);
+        list.insertAtTail(19);
+        list.insertAtTail(20);
+
+        System.out.println("List : " + list);
+        System.out.println("Length: " + list.length());
+
+//        // delete nodes
+//        System.out.println("deleting head");
+//        list.deleteFromHead();
+//        System.out.println("List : " + list);
+//        System.out.println("Length: " + list.length());
+//
+//        // delete nodes
+//        System.out.println("finding node");
+//        System.out.println("search for 12: " + list.find(12));
+//        System.out.println("search for 15: " + list.find(15));
     }
 
     private static void linkedList() {
@@ -40,9 +67,7 @@ public class Application {
         System.out.println("finding node");
         System.out.println("search for 12: " + list.find(12));
         System.out.println("search for 15: " + list.find(15));
-
     }
-
 
     private static void insertionSort() {
         int[] insertionSort = InsertionSort.sort(new int[]{12, 5, 8, 7, 2});
