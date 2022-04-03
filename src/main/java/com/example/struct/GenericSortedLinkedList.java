@@ -1,22 +1,24 @@
 package com.example.struct;
 
+import java.util.StringJoiner;
+
 public class GenericSortedLinkedList<T extends Comparable<T>> {
     private GenericNode<T> head;
 
     public void insert(T data) {
-        GenericNode<T> newGenericNode = new GenericNode<T>(data);
+        GenericNode<T> newNode = new GenericNode<T>(data);
         if (this.head == null || this.head.getData().compareTo(data) > 0) {
-            newGenericNode.setNextGenericNode(this.head);
-            this.head = newGenericNode;
+            newNode.setNextNode(this.head);
+            this.head = newNode;
             return;
         }
         GenericNode<T> current = this.head;
-        while (current != null && current.getNextGenericNode() != null
-                && current.getNextGenericNode().getData().compareTo(data) < 0) {
-            current = current.getNextGenericNode();
+        while (current != null && current.getNextNode() != null
+                && current.getNextNode().getData().compareTo(data) < 0) {
+            current = current.getNextNode();
         }
-        newGenericNode.setNextGenericNode(current.getNextGenericNode());
-        current.setNextGenericNode(newGenericNode);
+        newNode.setNextNode(current.getNextNode());
+        current.setNextNode(newNode);
     }
 
     public GenericNode<T> getHead() {
@@ -25,13 +27,12 @@ public class GenericSortedLinkedList<T extends Comparable<T>> {
 
     @Override
     public String toString() {
-        String result = "[";
+        StringJoiner result = new StringJoiner(",", "[", "]");
         GenericNode<T> current = this.head;
         while (current != null) {
-            result += current.toString() + ", ";
-            current = current.getNextGenericNode();
+            result.add(current.toString());
+            current = current.getNextNode();
         }
-        result += "]";
-        return result;
+        return result.toString();
     }
 }

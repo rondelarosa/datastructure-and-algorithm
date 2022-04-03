@@ -16,11 +16,11 @@ public class GenericNode<T> {
         return data;
     }
 
-    public GenericNode<T> getNextGenericNode() {
+    public GenericNode<T> getNextNode() {
         return nextGenericNode;
     }
 
-    public void setNextGenericNode(GenericNode<T> nextGenericNode) {
+    public void setNextNode(GenericNode<T> nextGenericNode) {
         this.nextGenericNode = nextGenericNode;
     }
 
