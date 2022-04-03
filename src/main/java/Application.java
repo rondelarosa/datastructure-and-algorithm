@@ -25,7 +25,23 @@ public class Application {
 //        headRecursion();
 //        tailRecursion();
 //        towerOfHanoi();
-        mergeSorter();
+//        mergeSorter();
+        binarySearchTree();
+    }
+
+    private static void binarySearchTree() {
+        int[] sample = { 212, 580, 6, 7, 28, 84, 112, 434};
+        BinarySearchTree bst = new BinarySearchTree();
+        for (int x : sample) {
+            bst.insert(x);
+        }
+        System.out.println( "find 65: " + bst.find(65));
+        System.out.println("find smallest: " + bst.smallest());
+        System.out.println("find largest: " + bst.largest());
+//		bst.delete(84);
+        System.out.println("number of left nodes: " + bst.numOfLeafNodes());
+        System.out.println("binary serch tree height: " + bst.height());
+        bst.traverseInOrder();
     }
 
     private static void mergeSorter(){
