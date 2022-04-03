@@ -1,8 +1,11 @@
 import com.example.Recursive;
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
+import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
+
+import java.util.Arrays;
 
 public class Application {
 
@@ -17,11 +20,19 @@ public class Application {
 //        insertionSort();
 //        linkedList();
 //        doubleEndedList();
-        sortedlinkedList();
+//        sortedlinkedList();
 //        doubleLinkedList();
 //        headRecursion();
 //        tailRecursion();
 //        towerOfHanoi();
+        mergeSorter();
+    }
+
+    private static void mergeSorter(){
+        MergeSorter sorter = new MergeSorter();
+        int[] data = {4,1,6,9,5};
+        sorter.sort(data);
+        System.out.println(Arrays.toString(data));
     }
 
     /**
