@@ -1,3 +1,4 @@
+import com.example.Recursive;
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
 import com.example.sort.SelectionSort;
@@ -17,7 +18,12 @@ public class Application {
 //        linkedList();
 //        doubleEndedList();
 //        sortedlinkedList();
-        doubleLinkedList();
+//        doubleLinkedList();
+        recursion();
+    }
+
+    private static void recursion() {
+        System.out.println("recursive > factorial of 3: " + Recursive.factorial(3));
     }
 
     private static void doubleLinkedList() {
