@@ -17,10 +17,10 @@ public class Application {
 //        insertionSort();
 //        linkedList();
 //        doubleEndedList();
-//        sortedlinkedList();
+        sortedlinkedList();
 //        doubleLinkedList();
 //        headRecursion();
-        tailRecursion();
+//        tailRecursion();
 //        towerOfHanoi();
     }
 
@@ -69,16 +69,15 @@ public class Application {
 
     private static void sortedlinkedList() {
         // Insert nodes
-        SortedLinkedList list = new SortedLinkedList();
-        list.insertAtHead(5);
-        list.insertAtHead(12);
-        list.insertAtHead(2);
-        list.insertAtHead(10);
-        list.insertAtHead(19);
-        list.insertAtHead(20);
+        GenericSortedLinkedList<Integer> list = new GenericSortedLinkedList();
+        list.insert(5);
+        list.insert(12);
+        list.insert(2);
+        list.insert(10);
+        list.insert(19);
+        list.insert(20);
 
         System.out.println("List : " + list);
-        System.out.println("Length: " + list.length());
     }
 
     private static void doubleEndedList() {
