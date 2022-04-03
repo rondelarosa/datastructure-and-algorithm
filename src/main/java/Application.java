@@ -19,11 +19,28 @@ public class Application {
 //        doubleEndedList();
 //        sortedlinkedList();
 //        doubleLinkedList();
-        recursion();
+//        headRecursion();
+//        tailRecursion();
+        towerOfHanoi();
     }
 
-    private static void recursion() {
+    /**
+     * May cause stack overflow
+     */
+    private static void headRecursion() {
         System.out.println("recursive > factorial of 3: " + Recursive.factorial(3));
+    }
+
+    private static void tailRecursion() {
+        int result = 0;
+        System.out.println("recursive > factorial of 3: " + Recursive.factorial(3, result));
+    }
+
+    /**
+     * moving disc 1 at a time
+     */
+    private static void towerOfHanoi() {
+        Recursive.move(3, 'A', 'C', 'B');
     }
 
     private static void doubleLinkedList() {
