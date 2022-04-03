@@ -3,6 +3,9 @@ package com.example.sort;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Good for 10000 or small for InsertionSort
+ */
 public class ShellSorter {
 	
 	public void sort(Integer[] values) {
@@ -34,7 +37,11 @@ public class ShellSorter {
 			i = i + gap;
 		}
 	}
-	
+
+	/**
+	 * Donald Knuth, invented Knuth sequence and in reverse order, formula | h = 3h + 1
+	 * h = 1, h=4, h=13, h=40, h=121, upon h < data.length
+	 */
 	private int maxKnuthSeqNumber(int size) {
 		int h = 1;
 		while (h < size/3) {
