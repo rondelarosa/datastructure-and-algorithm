@@ -1,9 +1,7 @@
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
 import com.example.sort.SelectionSort;
-import com.example.struct.DoubleEndedList;
-import com.example.struct.LinkedList;
-import com.example.struct.SortedLinkedList;
+import com.example.struct.*;
 
 public class Application {
 
@@ -18,7 +16,32 @@ public class Application {
 //        insertionSort();
 //        linkedList();
 //        doubleEndedList();
-        sortedlinkedList();
+//        sortedlinkedList();
+        doubleLinkedList();
+    }
+
+    private static void doubleLinkedList() {
+        // Insert nodes
+        DoubleLinkedList list = new DoubleLinkedList();
+        list.insertAtHead(5);
+        list.insertAtHead(12);
+        list.insertAtHead(2);
+        list.insertAtHead(10);
+        list.insertAtHead(19);
+        list.insertAtHead(20);
+
+        System.out.println("List : " + list);
+        System.out.println("Length: " + list.length());
+        DoubleLinkedNode node = list.getHead();
+        while (node != null) {
+            if (node.getPreviousNode() != null && node.getNextNode() != null)
+                System.out.println("node : " + node.getData() + " previous:" + node.getPreviousNode().getData() + " next:" + node.getNextNode().getData());
+            if (node.getPreviousNode() != null && node.getNextNode() == null)
+                System.out.println("node : " + node.getData() + " previous:" + node.getPreviousNode().getData());
+            else if (node.getPreviousNode() == null && node.getNextNode() != null)
+                System.out.println("node : " + node.getData());
+            node = node.getNextNode();
+        }
     }
 
     private static void sortedlinkedList() {
