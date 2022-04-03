@@ -20,8 +20,8 @@ public class Application {
 //        sortedlinkedList();
 //        doubleLinkedList();
 //        headRecursion();
-//        tailRecursion();
-        towerOfHanoi();
+        tailRecursion();
+//        towerOfHanoi();
     }
 
     /**
