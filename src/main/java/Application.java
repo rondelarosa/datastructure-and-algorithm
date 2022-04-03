@@ -3,6 +3,7 @@ import com.example.sort.InsertionSort;
 import com.example.sort.SelectionSort;
 import com.example.struct.DoubleEndedList;
 import com.example.struct.LinkedList;
+import com.example.struct.SortedLinkedList;
 
 public class Application {
 
@@ -16,7 +17,22 @@ public class Application {
 //
 //        insertionSort();
 //        linkedList();
-        doubleEndedList();
+//        doubleEndedList();
+        sortedlinkedList();
+    }
+
+    private static void sortedlinkedList() {
+        // Insert nodes
+        SortedLinkedList list = new SortedLinkedList();
+        list.insertAtHead(5);
+        list.insertAtHead(12);
+        list.insertAtHead(2);
+        list.insertAtHead(10);
+        list.insertAtHead(19);
+        list.insertAtHead(20);
+
+        System.out.println("List : " + list);
+        System.out.println("Length: " + list.length());
     }
 
     private static void doubleEndedList() {
@@ -31,17 +47,6 @@ public class Application {
 
         System.out.println("List : " + list);
         System.out.println("Length: " + list.length());
-
-//        // delete nodes
-//        System.out.println("deleting head");
-//        list.deleteFromHead();
-//        System.out.println("List : " + list);
-//        System.out.println("Length: " + list.length());
-//
-//        // delete nodes
-//        System.out.println("finding node");
-//        System.out.println("search for 12: " + list.find(12));
-//        System.out.println("search for 15: " + list.find(15));
     }
 
     private static void linkedList() {
