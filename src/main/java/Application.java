@@ -36,7 +36,8 @@ public class Application {
 //        StringTasks.rotateAnArray();
 //        CustomLinkedList.example();
 //        CustomLinkedList.challenge();
-        Queue2.example();
+//        Queue2.example();
+        Stack2.example();
     }
 
     private static void binarySearchTree() {
