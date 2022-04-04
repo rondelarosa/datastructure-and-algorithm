@@ -6,6 +6,7 @@ import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
 import com.example.struct.setmap.HashSetAndMap;
+import com.example.struct.tree.Test;
 
 import java.util.Arrays;
 
@@ -44,7 +45,8 @@ public class Application {
 //        HashSetAndMap.example();
 //        HashSetAndMap.findMissingElement();
 //        HashSetAndMap.displayFreqOfEachElement();
-        HashSetAndMap.hasCycle();
+//        HashSetAndMap.hasCycle();
+        Test.binarySearchTree();
     }
 
     private static void binarySearchTree() {
