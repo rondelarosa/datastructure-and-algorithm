@@ -214,7 +214,7 @@ public class StringTasks {
         Arrays.stream(tasks.findEvenNumber(arr1, arr2)).forEach(System.out::println);
     }
 
-    public int[] reverseArrayOld(int[] arr) {
+    public int[] reverseArray(int[] arr) {
         int[] result = new int[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
@@ -227,10 +227,11 @@ public class StringTasks {
     /**
      * In place sorting no new array created
      */
-    public int[] reverseArray(int[] arr) {
+    public int[] reverseArrayInPlace(int[] arr) {
         // to not make changes to the source
         int[] result = arr.clone();
 
+        // for loop in half (result.length / 2)
         for (int i = 0; i < result.length / 2; i++) {
             // Swap item at index (i) and
             // item at index (arr.length -i -1)
@@ -242,12 +243,56 @@ public class StringTasks {
         return result;
     }
 
-    public static void reverseArrayOld() {
+    public static void reverseArray() {
         int[] arr1 = {-9, 3, 2, -8, 12, -16};
 
         StringTasks tasks = new StringTasks();
         System.out.println("source: " + Arrays.toString(arr1));
 //        Arrays.stream(tasks.reverseArrayOld(arr1)).forEach(System.out::println);
-        Arrays.stream(tasks.reverseArray(arr1)).forEach(System.out::println);
+        Arrays.stream(tasks.reverseArrayInPlace(arr1)).forEach(System.out::println);
+    }
+
+    public int[] rotateArrayToLeft(int[] arr) {
+        // to not make changes to the source
+        int[] result = arr.clone();
+
+        int temp = result[0];
+        for (int i = 0; i < result.length - 1; i++) {
+            // Swap item at index (i) and
+            // item at index (i + 1)
+            result[i] = result[i + 1];
+        }
+        result[result.length - 1] = temp;
+
+        return result;
+    }
+
+    public int[] rotateArrayToRight(int[] arr) {
+        // to not make changes to the source
+        int[] result = arr.clone();
+
+        int temp = result[result.length - 1];
+        for (int i = result.length - 1; i > 0; i--) {
+            // Swap item at index (i) and
+            // item at index (i - 1)
+            result[i] = result[i - 1];
+        }
+        result[0] = temp;
+
+        return result;
+    }
+
+    public static void rotateAnArray() {
+        int[] arr1 = {-9, 3, 2, -8, 12, -16};
+
+        StringTasks tasks = new StringTasks();
+        System.out.println("source: " + Arrays.toString(arr1));
+        int[] results = tasks.rotateArrayToLeft(arr1);
+
+        System.out.println("source > to left: " + Arrays.toString(results));
+        Arrays.stream(results).forEach(System.out::println);
+
+        System.out.println("source > to right: " + Arrays.toString(results));
+        Arrays.stream(tasks.rotateArrayToRight(results)).forEach(System.out::println);
     }
 }

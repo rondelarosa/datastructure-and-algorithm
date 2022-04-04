@@ -32,7 +32,8 @@ public class Application {
 //        StringTasks.linearSearch();
 //        StringTasks.binarySearch();
 //        StringTasks.findEvenNumber();
-        StringTasks.reverseArrayOld();
+//        StringTasks.reverseArray();
+        StringTasks.rotateAnArray();
     }
 
     private static void binarySearchTree() {
