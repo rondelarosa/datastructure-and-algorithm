@@ -7,6 +7,9 @@ import java.util.Stack;
  */
 public class Stack2 {
 
+    /**
+     * O(1) time algorithm
+     */
     public boolean hasMatchingEfficient(String s) {
         Stack<Character> stack = new Stack<>();
         int matching = 0;
@@ -24,6 +27,9 @@ public class Stack2 {
         return matching == 0;
     }
 
+    /**
+     * O(n) time algorithm
+     */
     public boolean hasMatchingInefficient(String s) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
