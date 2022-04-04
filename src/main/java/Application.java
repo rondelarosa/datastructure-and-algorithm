@@ -31,7 +31,8 @@ public class Application {
 //        StringTasks.reverseWord("This is test data");
 //        StringTasks.linearSearch();
 //        StringTasks.binarySearch();
-        StringTasks.findEvenNumber();
+//        StringTasks.findEvenNumber();
+        StringTasks.reverseArrayOld();
     }
 
     private static void binarySearchTree() {

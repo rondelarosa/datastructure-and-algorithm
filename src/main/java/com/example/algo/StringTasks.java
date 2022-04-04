@@ -213,4 +213,41 @@ public class StringTasks {
 
         Arrays.stream(tasks.findEvenNumber(arr1, arr2)).forEach(System.out::println);
     }
+
+    public int[] reverseArrayOld(int[] arr) {
+        int[] result = new int[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            result[i] = arr[arr.length - 1 - i];
+        }
+
+        return result;
+    }
+
+    /**
+     * In place sorting no new array created
+     */
+    public int[] reverseArray(int[] arr) {
+        // to not make changes to the source
+        int[] result = arr.clone();
+
+        for (int i = 0; i < result.length / 2; i++) {
+            // Swap item at index (i) and
+            // item at index (arr.length -i -1)
+            int temp = result[i];
+            result[i] = result[result.length - 1 - i];
+            result[result.length - 1 - i] = temp;
+        }
+
+        return result;
+    }
+
+    public static void reverseArrayOld() {
+        int[] arr1 = {-9, 3, 2, -8, 12, -16};
+
+        StringTasks tasks = new StringTasks();
+        System.out.println("source: " + Arrays.toString(arr1));
+//        Arrays.stream(tasks.reverseArrayOld(arr1)).forEach(System.out::println);
+        Arrays.stream(tasks.reverseArray(arr1)).forEach(System.out::println);
+    }
 }
