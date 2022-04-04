@@ -1,8 +1,11 @@
 package com.example.algo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.OptionalInt;
 import java.util.StringJoiner;
+import java.util.function.IntPredicate;
+import java.util.stream.Stream;
 
 public class StringTasks {
     /**
@@ -128,7 +131,7 @@ public class StringTasks {
     /**
      * Linear search arrays to simplify seach implementation and prevent null pinter exception
      */
-    public static OptionalInt linearSearch(int[] arr, int item) {
+    public OptionalInt linearSearch(int[] arr, int item) {
         return Arrays.stream(arr).filter(f -> f == item).findFirst();
     }
 
@@ -137,15 +140,16 @@ public class StringTasks {
      */
     public static void linearSearch() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
-        linearSearch(arr, 1).ifPresent(System.out::println);
-        linearSearch(arr, 8).ifPresent(System.out::println);
+        StringTasks tasks = new StringTasks();
+        tasks.linearSearch(arr, 1).ifPresent(System.out::println);
+        tasks.linearSearch(arr, 8).ifPresent(System.out::println);
     }
 
     /**
      * Assumption, data is sorted
      * Binary Search tree is divide and conquer algorithm
      */
-    public static boolean binarySearch(int[] arr, int item) {
+    public boolean binarySearch(int[] arr, int item) {
         int min = 0;
         int max = arr.length - 1;
 
@@ -165,8 +169,48 @@ public class StringTasks {
 
     public static void binarySearch() {
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
-        System.out.println("source: " + Arrays.toString(arr) + ", find 1: " + binarySearch(arr, 1));
-        System.out.println("source: " + Arrays.toString(arr) + ", find 5: " + binarySearch(arr, 5));
-        System.out.println("source: " + Arrays.toString(arr) + ", find 8: " + binarySearch(arr, 8));
+        StringTasks tasks = new StringTasks();
+        System.out.println("source: " + Arrays.toString(arr) + ", find 1: " + tasks.binarySearch(arr, 1));
+        System.out.println("source: " + Arrays.toString(arr) + ", find 5: " + tasks.binarySearch(arr, 5));
+        System.out.println("source: " + Arrays.toString(arr) + ", find 8: " + tasks.binarySearch(arr, 8));
+    }
+
+    /**
+     * Old approach
+     */
+    public int[] findEvenNumberOld(int[] arr1, int[] arr2) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for (int num : arr1) {
+            if (num % 2 == 0)
+                result.add(num);
+        }
+
+        for (int num : arr2) {
+            if (num % 2 == 0)
+                result.add(num);
+        }
+
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    /**
+     * Cleaner approach in finding even number
+     */
+    public int[] findEvenNumber(int[] arr1, int[] arr2) {
+        IntPredicate isEvenPred = num -> num % 2 == 0;
+        return Stream.of(arr1, arr2)
+                .flatMapToInt(Arrays::stream)
+                .filter(isEvenPred)
+                .toArray();
+    }
+
+    public static void findEvenNumber() {
+        int[] arr1 = {-9, 3, 2, -8, 12, -16};
+        int[] arr2 = {0, -3, -8, -35, 40, 20, 7};
+
+        StringTasks tasks = new StringTasks();
+        System.out.println("source: " + Arrays.toString(arr1) + " results: " + Arrays.toString(tasks.findEvenNumber(arr1, arr2)));
+
+        Arrays.stream(tasks.findEvenNumber(arr1, arr2)).forEach(System.out::println);
     }
 }

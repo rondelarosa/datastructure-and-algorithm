@@ -30,16 +30,17 @@ public class Application {
 //        binarySearchTree();
 //        StringTasks.reverseWord("This is test data");
 //        StringTasks.linearSearch();
-        StringTasks.binarySearch();
+//        StringTasks.binarySearch();
+        StringTasks.findEvenNumber();
     }
 
     private static void binarySearchTree() {
-        int[] sample = { 212, 580, 6, 7, 28, 84, 112, 434};
+        int[] sample = {212, 580, 6, 7, 28, 84, 112, 434};
         BinarySearchTree bst = new BinarySearchTree();
         for (int x : sample) {
             bst.insert(x);
         }
-        System.out.println( "find 65: " + bst.find(65));
+        System.out.println("find 65: " + bst.find(65));
         System.out.println("find smallest: " + bst.smallest());
         System.out.println("find largest: " + bst.largest());
 //		bst.delete(84);
@@ -48,9 +49,9 @@ public class Application {
         bst.traverseInOrder();
     }
 
-    private static void mergeSorter(){
+    private static void mergeSorter() {
         MergeSorter sorter = new MergeSorter();
-        int[] data = {4,1,6,9,5};
+        int[] data = {4, 1, 6, 9, 5};
         sorter.sort(data);
         System.out.println(Arrays.toString(data));
     }
