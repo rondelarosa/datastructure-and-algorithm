@@ -1,6 +1,7 @@
 package com.example.algo;
 
 import java.util.Arrays;
+import java.util.OptionalInt;
 import java.util.StringJoiner;
 
 public class StringTasks {
@@ -100,14 +101,14 @@ public class StringTasks {
      * Reverse word
      * palindrome - a number that is equal or string to the same reverse
      */
-    public static  void reverseWord(String s) {
+    public static void reverseWord(String s) {
         if (s == null || s.isEmpty()) {
             return;
         }
 
         StringJoiner result = new StringJoiner(" ");
         String[] words = s.split(" ");
-        for (String w: words){
+        for (String w : words) {
             result.add(reverseSB(w));
         }
         System.out.println("Output 1: " + result.toString());
@@ -115,7 +116,7 @@ public class StringTasks {
         StringBuilder sb = new StringBuilder();
 
         // Option 2
-        for (int i=0; i < words.length; i++) {
+        for (int i = 0; i < words.length; i++) {
             sb.append(reverseSB(words[i]));
             if (i < words.length - 1)
                 sb.append(" ");
@@ -124,4 +125,48 @@ public class StringTasks {
         System.out.println("Output 2: " + sb.toString());
     }
 
+    /**
+     * Linear search arrays to simplify seach implementation and prevent null pinter exception
+     */
+    public static OptionalInt linearSearch(int[] arr, int item) {
+        return Arrays.stream(arr).filter(f -> f == item).findFirst();
+    }
+
+    /**
+     * Example of linear search
+     */
+    public static void linearSearch() {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        linearSearch(arr, 1).ifPresent(System.out::println);
+        linearSearch(arr, 8).ifPresent(System.out::println);
+    }
+
+    /**
+     * Assumption, data is sorted
+     * Binary Search tree is divide and conquer algorithm
+     */
+    public static boolean binarySearch(int[] arr, int item) {
+        int min = 0;
+        int max = arr.length - 1;
+
+        while (min <= max) {
+            int mid = (min + max) / 2;
+            if (item == arr[mid]) {
+                return true;
+            } else if (item < arr[mid]) {
+                max = mid - 1; // lookup to shift the left content
+            } else if (item > arr[mid]) {
+                min = mid + 1; // lookup to shift the right content
+            }
+        }
+
+        return false;
+    }
+
+    public static void binarySearch() {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        System.out.println("source: " + Arrays.toString(arr) + ", find 1: " + binarySearch(arr, 1));
+        System.out.println("source: " + Arrays.toString(arr) + ", find 5: " + binarySearch(arr, 5));
+        System.out.println("source: " + Arrays.toString(arr) + ", find 8: " + binarySearch(arr, 8));
+    }
 }

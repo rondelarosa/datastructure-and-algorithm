@@ -28,7 +28,9 @@ public class Application {
 //        towerOfHanoi();
 //        mergeSorter();
 //        binarySearchTree();
-        StringTasks.reverseWord("This is test data");
+//        StringTasks.reverseWord("This is test data");
+//        StringTasks.linearSearch();
+        StringTasks.binarySearch();
     }
 
     private static void binarySearchTree() {
