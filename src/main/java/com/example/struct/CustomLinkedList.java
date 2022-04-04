@@ -44,7 +44,7 @@ public class CustomLinkedList {
         // first = b
         // second = d
 
-        first.next = first.next.next;
+        first.next = first.next.next; // this will disconnect deleted nodes
 
     }
 
