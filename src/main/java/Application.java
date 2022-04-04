@@ -37,7 +37,9 @@ public class Application {
 //        CustomLinkedList.example();
 //        CustomLinkedList.challenge();
 //        Queue2.example();
-        Stack2.example();
+//        Stack2.example();
+//        Stack2.exampleStackInefficient();
+        Stack2.exampleStackEfficient();
     }
 
     private static void binarySearchTree() {
