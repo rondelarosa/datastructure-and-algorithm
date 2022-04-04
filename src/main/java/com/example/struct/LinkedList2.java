@@ -2,14 +2,14 @@ package com.example.struct;
 
 import java.util.StringJoiner;
 
-public class LinkedList {
-    private Node head;
+public class LinkedList2 {
+    private Node2 head;
 
-    public Node getHead() {
+    public Node2 getHead() {
         return head;
     }
 
-    public void setHead(Node head) {
+    public void setHead(Node2 head) {
         this.head = head;
     }
 
@@ -17,14 +17,14 @@ public class LinkedList {
      * Big O notation of 1 > O(1)
      */
     public void insertAtHead(int data) {
-        Node newNode = new Node(data);
+        Node2 newNode = new Node2(data);
         newNode.setNextNode(this.head);
         this.head = newNode;
     }
 
     public String toString() {
         StringJoiner result = new StringJoiner(",", "{", "}");
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             result.add(current.toString());
@@ -36,7 +36,7 @@ public class LinkedList {
 
     public int length() {
         int length = 0;
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             length++;
@@ -55,8 +55,8 @@ public class LinkedList {
     /**
      * Big O notation of n > O(n)
      */
-    public Node find(int data) {
-        Node current = this.head;
+    public Node2 find(int data) {
+        Node2 current = this.head;
 
         while (current != null) {
             if (current.getData() == data) return current;

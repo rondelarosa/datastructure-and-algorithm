@@ -3,13 +3,13 @@ package com.example.struct;
 import java.util.StringJoiner;
 
 public class SortedLinkedList {
-    private Node head;
+    private Node2 head;
 
-    public Node getHead() {
+    public Node2 getHead() {
         return head;
     }
 
-    public void setHead(Node head) {
+    public void setHead(Node2 head) {
         this.head = head;
     }
 
@@ -17,12 +17,12 @@ public class SortedLinkedList {
      * Big O notation of n > O(n)
      */
     public void insertAtHead(int data) {
-        Node newNode = new Node(data);
+        Node2 newNode = new Node2(data);
         if (this.head == null) {
             this.head = newNode;
         }
 
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             // current node greater than new node and no next node
@@ -46,7 +46,7 @@ public class SortedLinkedList {
 
     public String toString() {
         StringJoiner result = new StringJoiner(",", "{", "}");
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             result.add(current.toString());
@@ -58,7 +58,7 @@ public class SortedLinkedList {
 
     public int length() {
         int length = 0;
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             length++;
@@ -77,8 +77,8 @@ public class SortedLinkedList {
     /**
      * Big O notation of n > O(n)
      */
-    public Node find(int data) {
-        Node current = this.head;
+    public Node2 find(int data) {
+        Node2 current = this.head;
 
         while (current != null) {
             if (current.getData() == data) return current;

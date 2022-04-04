@@ -3,15 +3,15 @@ package com.example.struct;
 import java.util.StringJoiner;
 
 public class DoubleEndedList {
-    private Node head;
-    private Node tail;
+    private Node2 head;
+    private Node2 tail;
 
 
     /**
      * Big O notation of 1 > O(1)
      */
     public void insertAtHead(int data) {
-        Node newNode = new Node(data);
+        Node2 newNode = new Node2(data);
         newNode.setNextNode(this.head);
         this.head = newNode;
     }
@@ -20,7 +20,7 @@ public class DoubleEndedList {
      * Big O notation of 1 > O(1)
      */
     public void insertAtTail(int data) {
-        Node newNode = new Node(data);
+        Node2 newNode = new Node2(data);
         if (this.head == null) {
             this.head = newNode;
         }
@@ -33,7 +33,7 @@ public class DoubleEndedList {
 
     public String toString() {
         StringJoiner result = new StringJoiner(",", "{", "}");
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             result.add(current.toString());
@@ -45,7 +45,7 @@ public class DoubleEndedList {
 
     public int length() {
         int length = 0;
-        Node current = this.head;
+        Node2 current = this.head;
 
         while (current != null) {
             length++;
@@ -64,8 +64,8 @@ public class DoubleEndedList {
     /**
      * Big O notation of n > O(n)
      */
-    public Node find(int data) {
-        Node current = this.head;
+    public Node2 find(int data) {
+        Node2 current = this.head;
 
         while (current != null) {
             if (current.getData() == data) return current;

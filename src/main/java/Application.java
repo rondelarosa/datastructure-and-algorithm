@@ -33,7 +33,9 @@ public class Application {
 //        StringTasks.binarySearch();
 //        StringTasks.findEvenNumber();
 //        StringTasks.reverseArray();
-        StringTasks.rotateAnArray();
+//        StringTasks.rotateAnArray();
+//        CustomLinkedList.example();
+        CustomLinkedList.challenge();
     }
 
     private static void binarySearchTree() {
@@ -130,7 +132,7 @@ public class Application {
 
     private static void linkedList() {
         // Insert nodes
-        LinkedList list = new LinkedList();
+        LinkedList2 list = new LinkedList2();
         list.insertAtHead(5);
         list.insertAtHead(10);
         list.insertAtHead(2);
