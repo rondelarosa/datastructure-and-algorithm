@@ -1,4 +1,5 @@
 import com.example.Recursive;
+import com.example.algo.StringTasks;
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
 import com.example.sort.MergeSorter;
@@ -26,7 +27,8 @@ public class Application {
 //        tailRecursion();
 //        towerOfHanoi();
 //        mergeSorter();
-        binarySearchTree();
+//        binarySearchTree();
+        StringTasks.reverseWord("This is test data");
     }
 
     private static void binarySearchTree() {
