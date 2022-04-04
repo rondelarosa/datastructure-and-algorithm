@@ -4,6 +4,14 @@ public class CustomLinkedList {
 
     Node head;
 
+    public void setHead(Node head) {
+        this.head = head;
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
     public void displayContents() {
         Node current = head;
         while (current != null) {

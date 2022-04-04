@@ -5,6 +5,7 @@ import com.example.sort.InsertionSort;
 import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
+import com.example.struct.setmap.HashSetAndMap;
 
 import java.util.Arrays;
 
@@ -39,7 +40,11 @@ public class Application {
 //        Queue2.example();
 //        Stack2.example();
 //        Stack2.exampleStackInefficient();
-        Stack2.exampleStackEfficient();
+//        Stack2.exampleStackEfficient();
+//        HashSetAndMap.example();
+//        HashSetAndMap.findMissingElement();
+//        HashSetAndMap.displayFreqOfEachElement();
+        HashSetAndMap.hasCycle();
     }
 
     private static void binarySearchTree() {
