@@ -7,6 +7,7 @@ import com.example.sort.SelectionSort;
 import com.example.struct.*;
 import com.example.struct.setmap.HashSetAndMap;
 import com.example.struct.tree.Test;
+import com.training.StringOps;
 
 import java.util.Arrays;
 
@@ -46,7 +47,8 @@ public class Application {
 //        HashSetAndMap.findMissingElement();
 //        HashSetAndMap.displayFreqOfEachElement();
 //        HashSetAndMap.hasCycle();
-        Test.binarySearchTree();
+//        Test.binarySearchTree();
+        replaceCharInWords();
     }
 
     private static void binarySearchTree() {
@@ -62,6 +64,13 @@ public class Application {
         System.out.println("number of left nodes: " + bst.numOfLeafNodes());
         System.out.println("binary serch tree height: " + bst.height());
         bst.traverseInOrder();
+    }
+
+    private static void replaceCharInWords() {
+        String test = "hello world, abc o";
+        StringOps op = new StringOps();
+        System.out.println(op.replaceCharsCommaSep(test));
+
     }
 
     private static void mergeSorter() {
