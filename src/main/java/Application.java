@@ -1,12 +1,10 @@
 import com.example.Recursive;
-import com.example.algo.StringTasks;
 import com.example.sort.BubbleSort;
 import com.example.sort.InsertionSort;
 import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
-import com.example.struct.setmap.HashSetAndMap;
-import com.example.struct.tree.Test;
+import com.training.Sorting;
 import com.training.StringOps;
 
 import java.util.Arrays;
@@ -48,7 +46,8 @@ public class Application {
 //        HashSetAndMap.displayFreqOfEachElement();
 //        HashSetAndMap.hasCycle();
 //        Test.binarySearchTree();
-        replaceCharInWords();
+//        replaceCharInWords();
+        Sorting.example();
     }
 
     private static void binarySearchTree() {
