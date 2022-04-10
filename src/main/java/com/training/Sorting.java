@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Sorting {
@@ -140,4 +141,25 @@ public class Sorting {
         return data;
     }
 
+    Random pivotRandom = new Random();
+
+    public int getRandom(int min, int max) {
+        return pivotRandom
+                .ints(min, (max + 1))
+                .findFirst()
+                .getAsInt();
+    }
+
+
+    public int[] quickSort(int[] data) {
+return data;
+    }
+
+    public int[] quick(int[] data, int left, int right) {
+        if(left < right) {
+            int pivotIndex = getRandom(left, right);
+
+        }
+        return data;
+    }
 }

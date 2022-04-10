@@ -4,6 +4,7 @@ import com.example.sort.InsertionSort;
 import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
+import com.training.ArraysAndLists;
 import com.training.Sorting;
 import com.training.StringOps;
 
@@ -47,7 +48,8 @@ public class Application {
 //        HashSetAndMap.hasCycle();
 //        Test.binarySearchTree();
 //        replaceCharInWords();
-        Sorting.example();
+//        Sorting.example();
+        ArraysAndLists.example();
     }
 
     private static void binarySearchTree() {
