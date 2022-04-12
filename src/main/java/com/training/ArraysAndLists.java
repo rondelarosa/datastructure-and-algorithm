@@ -26,7 +26,7 @@ public class ArraysAndLists {
 //        System.out.println("two pointer 6 k steps: " + Arrays.stream(kStepsTwoPointers3).mapToObj(Objects::toString).collect(Collectors.joining(",")));
 //        Arrays.stream(training.twoPointerRotateArrayKSteps(kStepsTwoPointers3, 6)).forEach(System.out::println);
 
-        MyLinkedList<Integer>  list = new MyLinkedList<>();
+        MyLinkedList<Integer> list = new MyLinkedList<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -41,6 +41,19 @@ public class ArraysAndLists {
         MyNode<Integer> head = list.getHead();
         System.out.println("two pointer for finding middle node, length: " + list.length());
         System.out.println("middle node: " + training.findMiddleNode(head));
+
+        MyNode<Integer> node1 = new MyNode<>(1);
+        MyNode<Integer> node2 = new MyNode<>(2);
+        MyNode<Integer> node3 = new MyNode<>(3);
+        MyNode<Integer> node4 = new MyNode<>(4);
+        MyNode<Integer> node5 = new MyNode<>(5);
+
+        node1.setNext(node2);
+        node2.setNext(node3);
+        node3.setNext(node4);
+        node4.setNext(node1);
+        node5.setNext(node2);
+        System.out.println("find node cycle: " + training.detectCycle(node1));
 
     }
 
@@ -122,11 +135,28 @@ public class ArraysAndLists {
         MyNode<T> slowPointer = head;
         MyNode<T> fastPointer = head;
 
-        while(fastPointer.getNext() != null && fastPointer.getNext().getNext() != null) {
+        while (fastPointer.getNext() != null && fastPointer.getNext().getNext() != null) {
             fastPointer = fastPointer.getNext().getNext();
             slowPointer = slowPointer.getNext();
         }
 
         return slowPointer.data;
+    }
+
+    /**
+     * Detecting node cycle
+     */
+    public <T> boolean detectCycle(MyNode<T> head) {
+        MyNode<T> slowPointer = head;
+        MyNode<T> fastPointer = head;
+
+        while (fastPointer != null && fastPointer.getNext() != null) {
+            fastPointer = fastPointer.getNext().getNext();
+            slowPointer = slowPointer.getNext();
+
+            if (slowPointer == fastPointer) return true;
+        }
+
+        return false;
     }
 }

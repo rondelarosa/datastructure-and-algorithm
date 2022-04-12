@@ -5,6 +5,7 @@ import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
 import com.training.ArraysAndLists;
+import com.training.PatternMatching;
 import com.training.Sorting;
 import com.training.StringOps;
 
@@ -15,7 +16,36 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("Entry point...");
         System.out.println("args > " + String.valueOf(args.length));
-//
+//        sorting();
+//        string();
+//        CustomLinkedList.example();
+//        CustomLinkedList.challenge();
+//        Queue2.example();
+//        Stack2.example();
+//        Stack2.exampleStackInefficient();
+//        Stack2.exampleStackEfficient();
+//        HashSetAndMap.example();
+//        HashSetAndMap.findMissingElement();
+//        HashSetAndMap.displayFreqOfEachElement();
+//        HashSetAndMap.hasCycle();
+//        Test.binarySearchTree();
+//        replaceCharInWords();
+//        Sorting.example();
+//        ArraysAndLists.example();
+        PatternMatching.example();
+    }
+
+    private static void string() {
+        //        StringTasks.reverseWord("This is test data");
+//        StringTasks.linearSearch();
+//        StringTasks.binarySearch();
+//        StringTasks.findEvenNumber();
+//        StringTasks.reverseArray();
+//        StringTasks.rotateAnArray();
+    }
+
+    private static void sorting() {
+        //
 //        bubbleSort();
 //
 //        selectionSort();
@@ -30,26 +60,6 @@ public class Application {
 //        towerOfHanoi();
 //        mergeSorter();
 //        binarySearchTree();
-//        StringTasks.reverseWord("This is test data");
-//        StringTasks.linearSearch();
-//        StringTasks.binarySearch();
-//        StringTasks.findEvenNumber();
-//        StringTasks.reverseArray();
-//        StringTasks.rotateAnArray();
-//        CustomLinkedList.example();
-//        CustomLinkedList.challenge();
-//        Queue2.example();
-//        Stack2.example();
-//        Stack2.exampleStackInefficient();
-//        Stack2.exampleStackEfficient();
-//        HashSetAndMap.example();
-//        HashSetAndMap.findMissingElement();
-//        HashSetAndMap.displayFreqOfEachElement();
-//        HashSetAndMap.hasCycle();
-//        Test.binarySearchTree();
-//        replaceCharInWords();
-//        Sorting.example();
-        ArraysAndLists.example();
     }
 
     private static void binarySearchTree() {
@@ -63,7 +73,7 @@ public class Application {
         System.out.println("find largest: " + bst.largest());
 //		bst.delete(84);
         System.out.println("number of left nodes: " + bst.numOfLeafNodes());
-        System.out.println("binary serch tree height: " + bst.height());
+        System.out.println("binary search tree height: " + bst.height());
         bst.traverseInOrder();
     }
 
