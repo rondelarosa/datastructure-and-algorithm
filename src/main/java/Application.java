@@ -4,6 +4,7 @@ import com.example.sort.InsertionSort;
 import com.example.sort.MergeSorter;
 import com.example.sort.SelectionSort;
 import com.example.struct.*;
+import com.test.microsoft.ExamMsApp;
 import com.training.ArraysAndLists;
 import com.training.PatternMatching;
 import com.training.Sorting;
@@ -32,7 +33,8 @@ public class Application {
 //        replaceCharInWords();
 //        Sorting.example();
 //        ArraysAndLists.example();
-        PatternMatching.example();
+//        PatternMatching.example();
+        ExamMsApp.example();
     }
 
     private static void string() {

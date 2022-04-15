@@ -18,6 +18,7 @@ public class MergeSort {
     }
 
     public void assign(int[] data, int index, int value) {
+
         data[index] = value;
     }
 
